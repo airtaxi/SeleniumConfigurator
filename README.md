@@ -3,9 +3,9 @@
 [![NuGet version (SeleniumConfigurator)](https://img.shields.io/nuget/v/SeleniumConfigurator.svg?style=flat-square)](https://www.nuget.org/packages/SeleniumConfigurator/)
 
 
-Selenium Configurator automatically downloads matching drivers for installed browsers.
-<br>The project supports Edge and Chrome.
-<br>Other browsers will be supported later.
+Selenium Configurator automatically downloads matching drivers for installed browsers.\
+The project supports Edge and Chrome.\
+Other browsers will be supported later.
 
 Usage
 ----
