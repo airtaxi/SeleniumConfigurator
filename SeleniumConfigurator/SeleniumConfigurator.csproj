@@ -9,7 +9,16 @@
     <Authors>Howon Lee</Authors>
     <IncludeSymbols>False</IncludeSymbols>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <PackageProjectUrl>https://github.com/airtaxi/SeleniumConfigurator</PackageProjectUrl>
+    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\LICENSE.txt">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="WebDriverManager" Version="2.15.0" />
