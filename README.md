@@ -1,8 +1,8 @@
 # SeleniumConfigurator
 
 Selenium Configurator automatically downloads matching drivers for installed browsers.
-The project supports Edge and Chrome.
-Other browsers will be supported later.
+<br>The project supports Edge and Chrome.
+<br>Other browsers will be supported later.
 
 Usage
 ----
