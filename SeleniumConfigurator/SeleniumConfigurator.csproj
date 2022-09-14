@@ -11,6 +11,8 @@
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <PackageProjectUrl>https://github.com/airtaxi/SeleniumConfigurator</PackageProjectUrl>
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    <Description>Selenium Configurator automatically downloads matching drivers for installed browsers. The project supports Edge and Chrome. Other browsers will be supported later.</Description>
+    <PackageTags>Selenium</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>
