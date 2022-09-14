@@ -13,10 +13,18 @@
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
     <Description>Selenium Configurator automatically downloads matching drivers for installed browsers. The project supports Edge and Chrome. Other browsers will be supported later.</Description>
     <PackageTags>Selenium</PackageTags>
+    <RepositoryUrl>https://github.com/airtaxi/SeleniumConfigurator</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <Copyright>Copyright (c) 2022 Howon Lee</Copyright>
   </PropertyGroup>
 
   <ItemGroup>
     <None Include="..\LICENSE.txt">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\README.md">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
