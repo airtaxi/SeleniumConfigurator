@@ -32,7 +32,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="WebDriverManager" Version="2.15.0" />
+    <PackageReference Include="WebDriverManager" Version="2.17.1" />
   </ItemGroup>
 
 </Project>
