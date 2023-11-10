@@ -27,7 +27,7 @@ public static class Edge
 		// This is important because the working directory would set to System32 if the program started as a startup task of Windows
 		var binaryDirectory = AppContext.BaseDirectory;
 		var driverManager = new DriverManager(binaryDirectory); // Override the default binary directory to the current assembly directory
-		var driverPath = driverManager.SetUpDriver(new ChromeConfig(), version);
+		var driverPath = driverManager.SetUpDriver(new EdgeConfig(), version);
 		return driverPath;
 	}
 }
