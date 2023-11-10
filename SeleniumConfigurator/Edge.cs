@@ -1,4 +1,5 @@
 ﻿using Microsoft.Win32;
+using System.Reflection;
 using WebDriverManager;
 using WebDriverManager.DriverConfigs.Impl;
 
@@ -21,7 +22,11 @@ public static class Edge
     public static string GetDriverPath()
     {
         var version = GetVersion() ?? throw new EdgeNotInstalledException();
-		var driverPath = new DriverManager().SetUpDriver(new EdgeConfig(), version);
-        return driverPath;
-    }
+		// Bugfix: This will get the directory of the current assembly, not the directory of the working directory
+		// This is important because the working directory would set to System32 if the program started as a startup task of Windows
+		var binaryDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+		var driverManager = new DriverManager(binaryDirectory); // Override the default binary directory to the current assembly directory
+		var driverPath = driverManager.SetUpDriver(new ChromeConfig(), version);
+		return driverPath;
+	}
 }
