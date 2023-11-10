@@ -20,12 +20,13 @@ public static class Chrome
     }
 
     public static string GetDriverPath()
-    {
-        var version = GetVersion() ?? throw new ChromeNotInstalledException(); // Get Version or throw exception if Browser is not installed
-		// Bugfix: This will get the directory of the current assembly, not the directory of the working directory
-        // This is important because the working directory would set to System32 if the program started as a startup task of Windows
-		var binaryDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location); 
-        var driverManager = new DriverManager(binaryDirectory); // Override the default binary directory to the current assembly directory
+	{
+		// Get Version or throw exception if Browser is not installed
+		var version = GetVersion() ?? throw new ChromeNotInstalledException();
+	    // Bugfix: This will get the directory of the current assembly, not the directory of the working directory
+	    // This is important because the working directory would set to System32 if the program started as a startup task of Windows
+		var binaryDirectory = AppContext.BaseDirectory;
+		var driverManager = new DriverManager(binaryDirectory); // Override the default binary directory to the current assembly directory
 		var driverPath = driverManager.SetUpDriver(new ChromeConfig(), version);
         return driverPath;
     }
